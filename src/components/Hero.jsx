@@ -1,68 +1,32 @@
 import React from 'react';
 import bg from "../assets/newBg.jpeg";
-import SW from "../assets/SW.png";
+import SW from "../assets/NSW.png";
 import TW from "../assets/TW.png";
 
 const Hero = () => {
     return (
-        <div className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${bg})` }}>
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <div className="flex flex-row space-x-4">
-                    <div>
-                        <img src={TW} alt="Table water" />
+        <div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${bg})`, height: '760px' }}>
+            <div className="absolute inset-0 z-10 flex items-center justify-around">
+                <div className="flex flex-row gap-0">
+                    <div className="ml-8"> {/* Adjusted margin */}
+                        <img src={TW} className="h-5/6 w-11/12 mt-44" alt="Table water" />
                     </div>
-                    <div>
-                        <img src={SW} alt="Sachet water" />
+                    <div className="ml-0"> {/* Adjusted margin */}
+                        <img src={SW} className="h-[800px] w-auto mt-96" alt="Sachet water" />
                     </div>
                 </div>
+                <div className={`mb-44 text-center`}>
+                    <h2 className="mb-4 text-5xl md:text-8xl tracking-tight font-extrabold text-blue-900">WILLFEAD
+                        WATER</h2>
+                    <p className="text-lg md:text-xl tracking-tight font-extrabold text-blue-900">
+                        Water is life's matter and matrix, mother and medium <br/>
+                        There is no life without water
+                    </p>
+                </div>
+
             </div>
         </div>
     );
 };
 
 export default Hero;
-
-
-
-
-
-
-
-// import React from 'react';
-// import bg from "../assets/newBg.jpeg";
-// import SW from "../assets/SW.png";
-// import TW from "../assets/TW.png";
-//
-// const Hero = () => {
-//     return (
-//         <div className="h-screen hero">
-//             <img
-//                 src={bg}
-//             />
-//
-//         </div>
-//         // <div className="relative flex flex-row">
-//         //     <div className="absolute inset-0 z-10 flex mt-100 items-center">
-//         //         <div>
-//         //             <img
-//         //                 src={TW}
-//         //                 alt="Table water"
-//         //             />
-//         //         </div>
-//         //         <div>
-//         //             <img src={SW} alt="Sachet water"
-//         //             />
-//         //         </div>
-//         //     </div>
-//         //     <div className="relative flex-1">
-//         //         <img
-//         //             src={bg}
-//         //             style={{ objectFit: 'cover', width: '100%', height: '50%' }}
-//         //             alt="Background"
-//         //         />
-//         //     </div>
-//         // </div>
-//     );
-// };
-//
-// export default Hero;
