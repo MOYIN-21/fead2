@@ -9,12 +9,12 @@ import React from 'react';
           <div className="grid border border-blue-400 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 bg-white ">
               <figure
                   className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-blue-400 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e ">
-                  {/*<blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 ">*/}
+                  <blockquote className="max-w-2xl mx-auto mb-4 lg:mb-8 ">
                   <h3 className="text-lg font-semibold text-blue-900">Our Mission</h3>
                   <p className="my-4">To sustainably deliver pure, high-quality water solutions that enhance the
                       well-being of our communities, while pioneering innovative practices in environmental stewardship
                       and resource management.</p>
-                  {/*</blockquote>*/}
+                  </blockquote>
               </figure>
               <figure
                   className="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-blue-400 md:rounded-se-lg ">
