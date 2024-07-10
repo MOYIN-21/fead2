@@ -6,13 +6,13 @@ import TW from "../assets/TW.png";
 const Hero = () => {
     return (
         <div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${bg})`, height: '760px' }}>
-            <div className="absolute inset-0 z-10 flex items-center justify-around">
+            <div className="absolute inset-0 z-10 flex flex-col md:flex-row  items-center justify-around">
                 <div className="flex flex-row gap-0">
-                    <div className="ml-8"> {/* Adjusted margin */}
-                        <img src={TW} className="h-5/6 w-11/12 mt-44" alt="Table water" />
+                    <div className="ml-8">
+                        <img src={TW} className="h-5/6 w-11/12 mt-44 hidden sm:block" alt="Table water" />
                     </div>
-                    <div className="ml-0"> {/* Adjusted margin */}
-                        <img src={SW} className="h-[800px] w-auto mt-96" alt="Sachet water" />
+                    <div className="ml-0">
+                        <img src={SW} className="h-[800px] w-auto mt-96 hidden sm:block" alt="Sachet water" />
                     </div>
                 </div>
                 <div className={`mb-44 text-center`}>
@@ -23,7 +23,6 @@ const Hero = () => {
                         There is no life without water
                     </p>
                 </div>
-
             </div>
         </div>
     );
