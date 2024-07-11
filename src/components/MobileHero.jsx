@@ -5,7 +5,7 @@ import SW from "../assets/new-removebg-preview.png";
 
 const MobileHero = () => {
     return (
-        <div className="relative h-screen bg-cover bg-center block lg:hidden"
+        <div className="relative h-screen bg-cover bg-center block "
              style={{backgroundImage: `url(${bg})`}}>
             <div className="absolute inset-0 opacity-50"></div>
             <div className="relative z-10 flex items-center justify-around h-full">
