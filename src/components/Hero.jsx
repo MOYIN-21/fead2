@@ -3,13 +3,13 @@ import bg from "../assets/newBg.jpeg";
 import SW from "../assets/NSW.png";
 import TW from "../assets/TW.png";
 import MobileHero from "./MobileHero";
+import LScreenHero from "./LScreenHero";
 
 const Hero = () => {
     return (
         <div>
-           <div>
                <MobileHero/>
-           </div>
+               <LScreenHero/>
         </div>
     );
 };
