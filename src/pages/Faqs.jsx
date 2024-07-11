@@ -50,7 +50,7 @@ const Faqs = () => {
         {faqs.map((faq, index) => (
             <div key={index} className="mb-4">
               <div
-                  className="flex justify-between items-center border-b border-gray-300 cursor-pointer"
+                  className="flex justify-between items-center border-b border-gray-300 cursor-pointer px-4"
                   onClick={() => toggleFaq(index)}
               >
                 <h2 className="text-lg font-semibold">{faq.question}</h2>
