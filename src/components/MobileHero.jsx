@@ -16,7 +16,7 @@ const MobileHero = () => {
                 </div>
                 <div className="flex flex-row gap-0">
                     <div className="ml-8">
-                        <img src={SW} className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 mt-44" alt="Table water" />
+                        {/*<img src={SW} className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 mt-44" alt="Table water" />*/}
                     </div>
                 </div>
             </div>
