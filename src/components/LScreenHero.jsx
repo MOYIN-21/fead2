@@ -5,7 +5,7 @@ import SW from "../assets/NSW.png";
 const LScreenHero = () => {
     return (
         <div
-        className=" h-screen bg-cover bg-center md:fixed inset-0"
+        className=" h-screen bg-cover bg-cente hidden lg:block inset-0"
         style={{ backgroundImage: `url(${bg})` }}
         >
         <div className="absolute inset-0"></div>
