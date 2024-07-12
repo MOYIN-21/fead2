@@ -43,14 +43,14 @@ const Faqs = () => {
   };
 
   return (
-      <div className="max-w-md mx-auto pt-10">
+      <div className="max-w-md mx-auto px-2 pt-10">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-blue-900">Frequently asked questions
           </h2>
         {/*<h1 className="text-3xl pt-20 font-bold text-center text-blue-950 mb-8">Frequently Asked Questions</h1>*/}
         {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 ">
               <div
-                  className="flex justify-between items-center border-b border-gray-300 cursor-pointer px-4"
+                  className="flex justify-between items-center border-b border-gray-300 cursor-pointer"
                   onClick={() => toggleFaq(index)}
               >
                 <h2 className="text-lg font-semibold">{faq.question}</h2>
