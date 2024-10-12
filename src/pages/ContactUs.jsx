@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 // import Email from "../assets/Email.png"
 import location from "../assets/location.png"
-import workinghour from "../assets/workinghour.png"
+import workingHour from "../assets/workinghour.png"
 import emergency from "../assets/emergency.png"
+import emailjs from 'emailjs-com';
+
 
 const ContactUs = () => {
     const [email, setEmail] = useState('');
@@ -12,8 +14,21 @@ const ContactUs = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic
-        console.log({ email, subject, message });
+
+        // EmailJS parameters
+        const templateParams = {
+            from_name: email,
+            subject: subject,
+            message: message,
+        };
+
+        emailjs.send('service_0uhuw5q', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+            });
     };
 
     return (
@@ -63,7 +78,7 @@ const ContactUs = () => {
                     <div className="flex flex-wrap flex-col items-center w-full sm:w-1/3 mb-6">
                         <div>
                             <img
-                                src={workinghour}
+                                src={workingHour}
                                 alt="home image"
                                 width={50}
                                 height={50}
@@ -81,14 +96,14 @@ const ContactUs = () => {
                 </div>
 
 
-                <form action="mailto:olawamidemoyinoluwamary@gmail.com" method="post" className="space-y-8">
+                <form action="mailto:olawamidemoyinoluwamary@gmail.com" onSubmit={handleSubmit} method="post" className="space-y-8">
                     <div>
                         <label htmlFor="email" className="block mb-2 text-sm font-medium">Your
                             email</label>
                         <input
                             type="email"
                             id="email"
-                            className="shadow-sm border border-blue-400 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:border-blue-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            className="shadow-sm border border-blue-400 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
                             placeholder="name@email.com"
                             required
                             value={email}
@@ -101,7 +116,7 @@ const ContactUs = () => {
                         <input
                             type="text"
                             id="subject"
-                            className="block p-3 w-full text-sm text-gray-900 rounded-lg border border-blue-400 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            className="block p-3 w-full text-sm text-gray-900 rounded-lg border border-blue-400 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
                             placeholder="Let us know how we can help you"
                             required
                             value={subject}
@@ -114,14 +129,14 @@ const ContactUs = () => {
                         <textarea
                             id="message"
                             // rows="6"
-                            className="block p-2.5 w-full text-sm text-gray-900 rounded-lg shadow-sm border border-blue-400 focus:ring-primary-500 focus:border-primary-500 dark:border-blue-400 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            className="block p-2.5 w-full text-sm text-gray-900 rounded-lg shadow-sm border border-blue-400 focus:ring-primary-500 focus:border-primary-500 "
                             placeholder="Leave a comment..."
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
                     </div>
                     <button type="submit"
-                            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-400 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-400 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-3000">
                         Send message
                     </button>
                 </form>
